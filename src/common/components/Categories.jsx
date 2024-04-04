@@ -4,6 +4,7 @@ import { BsWatch } from "react-icons/bs";
 import { IoCameraOutline } from "react-icons/io5";
 import { CiHeadphones } from "react-icons/ci";
 import { IoGameControllerOutline } from "react-icons/io5";
+import Title from './Title';
 
 const categoryData = [
     { icon: MdPhoneIphone, text: 'Phones' },
@@ -27,13 +28,9 @@ const Categories = () => {
 
     return (
         <div className='sm:mt-12 md:mt-24 lg:mt-32'>
-            <div className='flex gap-4 mb-6 items-center'>
-                <div className='w-5 h-8 bg-red-600 rounded-sm'></div>
-                <h3 className='text-2xl text-red-600 font-semibold'>Categories </h3>
-            </div>
-            <p className='text-4xl font-bold mb-14'>Browse By Category</p>
+            <Title sectionTitle="Categories" sectionInfo="Browse By Category"/>
 
-            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4  pb-14 border-b-gray-500'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-14  pb-14 border-b-gray-500'>
                 {categoryData.map((category, index) => (
                     <div 
                         key={index} 

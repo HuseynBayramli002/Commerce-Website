@@ -1,10 +1,10 @@
 import React from 'react'
-import SliderSwiper from '../section/Main/SliderSwiper';
-import ToDay from '../section/Main/ToDay';
-import Categories from '@/section/Main/Categories';
-import BestSelling from '@/section/Main/BestSelling';
-import ReklamSection from '@/section/Main/ReklamSection';
-import OurProducts from '@/section/Main/OurProducts';
+import SliderSwiper from '../common/components/SliderSwiper';
+import ToDay from '../common/components/ToDay';
+import Categories from '@/common/components/Categories';
+import BestSelling from '@/common/components/BestSelling';
+import ReklamSection from '@/common/components/ReklamSection';
+import OurProducts from '@/common/components/OurProducts';
 
 
 
