@@ -28,8 +28,8 @@ const ReklamSection = () => {
     },
   ]
   return (
-    <div className="bg-black container w-[90%] m-auto flex items-center gap-10">
-      <div className="">
+    <div className="bg-black flex items-center gap-10">
+      <div className="ml-14">
         <p className="font-semibold pt-16" style={{ color: '#00bd3d' }}>Categories </p>
         <p className="text-white font-semibold text-5xl tracking-wider  pt-8 ">
           Enhance Your <br /> Music Experience

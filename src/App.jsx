@@ -9,9 +9,7 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Header />
-      <div className='container '>
-        <Main />
-      </div>
+      <Main />
     </BrowserRouter>
 
   )

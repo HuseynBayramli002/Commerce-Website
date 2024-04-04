@@ -9,7 +9,7 @@ const OurProducts = () => {
         setDataCount(dataCount+1)
     }
     return (
-            <div className='container w-[90%] m-auto sm:mt-12 md:mt-24 lg:mt-32'>
+            <div className='sm:mt-12 md:mt-24 lg:mt-32'>
                 <div>
                     <div className='flex gap-4 mb-6 items-center'>
                         <div className='w-5 h-8 bg-red-600 rounded-sm'></div>
