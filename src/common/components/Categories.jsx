@@ -27,7 +27,7 @@ const Categories = () => {
     };
 
     return (
-        <div className='sm:mt-12 md:mt-24 lg:mt-32'>
+        <div className='sm:mt-12 md:mt-24 lg:mt-32 border-b-2 border-gray-300 '>
             <Title sectionTitle="Categories" sectionInfo="Browse By Category"/>
 
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-14  pb-14 border-b-gray-500'>

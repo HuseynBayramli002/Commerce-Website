@@ -5,6 +5,7 @@ import Categories from '@/common/components/Categories';
 import BestSelling from '@/common/components/BestSelling';
 import ReklamSection from '@/common/components/ReklamSection';
 import OurProducts from '@/common/components/OurProducts';
+import NewArrival from '@/common/components/NewArrival';
 
 
 
@@ -17,6 +18,7 @@ const Main = () => {
             <BestSelling />
             <ReklamSection />
             <OurProducts />
+            <NewArrival/>
         </div>
     )
 }
