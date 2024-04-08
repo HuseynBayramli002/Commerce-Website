@@ -11,8 +11,8 @@ const NewArrival = () => {
     <div className='mt-32'>
       <Title sectionTitle="Featured" sectionInfo="New Arrival" />
 
-      <div class="grid grid-cols-4 grid-rows-2 h-[600px] gap-8 mt-12">
-        <div class="bg-black col-span-2 row-span-2 relative flex items-end  ">
+      <div className="grid grid-cols-4 grid-rows-2 h-[600px] gap-8 mt-12">
+        <div className="bg-black col-span-2 row-span-2 relative flex items-end  ">
           <div className='absolute bottom-0 right-0'>
             <img src={Ps5} alt="" />
           </div>
@@ -22,7 +22,7 @@ const NewArrival = () => {
             <NavLink to={'/'} className='text-white  font-bold border-b ml-0 mr-auto border-white '>Shop Now</NavLink>
           </div>
         </div>
-        <div class="bg-[#0D0D0D] col-span-2 row-span-1 relative flex items-end">
+        <div className="bg-[#0D0D0D] col-span-2 row-span-1 relative flex items-end">
           <div className='absolute bottom-0 right-0'>
             <img src={Hat} alt="" />
           </div>
@@ -32,7 +32,7 @@ const NewArrival = () => {
             <NavLink to={'/'} className='text-white  font-bold border-b ml-0 mr-auto border-white '>Shop Now</NavLink>
           </div>
         </div>
-        <div class="bg-black col-span-1 row-span-1 relative flex items-end">
+        <div className="bg-black col-span-1 row-span-1 relative flex items-end">
           <div className='absolute bottom-0 right-4'>
             <img src={Mp3} alt="" />
           </div>
@@ -42,7 +42,7 @@ const NewArrival = () => {
           <NavLink to={'/'} className='text-white  font-bold border-b ml-0 mr-auto border-white '>Shop Now</NavLink>
           </div>
         </div>
-        <div class="bg-black col-span-1 row-span-1 relative flex items-end">
+        <div className="bg-black col-span-1 row-span-1 relative flex items-end">
           <div className='absolute bottom-0 right-4'>
             <img src={Parfum} alt="" />
           </div>

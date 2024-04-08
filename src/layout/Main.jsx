@@ -6,6 +6,7 @@ import BestSelling from '@/common/components/BestSelling';
 import ReklamSection from '@/common/components/ReklamSection';
 import OurProducts from '@/common/components/OurProducts';
 import NewArrival from '@/common/components/NewArrival';
+import ServiceInfo from '@/common/components/ServiceInfo';
 
 
 
@@ -19,6 +20,7 @@ const Main = () => {
             <ReklamSection />
             <OurProducts />
             <NewArrival/>
+            <ServiceInfo/>
         </div>
     )
 }
