@@ -49,7 +49,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <p className='text-center p-3'>&copy; 2022. All Rights Reserved</p>
+                <p className='text-center p-3 text-gray-500'>&copy; 2024, Hüseyn Bayramlı. All Rights Reserved</p>
             </div>
         </div>
     )
