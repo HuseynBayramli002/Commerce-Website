@@ -1,5 +1,4 @@
 import { useRef } from 'react'
-
 import { CiSearch } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
 import { CiHeart } from "react-icons/ci";
