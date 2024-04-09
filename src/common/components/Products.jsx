@@ -3,7 +3,6 @@ import axios from "axios";
 import { FaHeart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
-import Rater from "react-rater";
 import { Rate } from 'antd';
 import "react-rater/lib/react-rater.css";
 

@@ -50,7 +50,7 @@ const ToDay = () => {
             </div>
             <Products percentage={0.7} pageCount={dataCount} />
             <div className=' py-14 border-b-2 border-gray-300 flex justify-center'>
-                <Button buttonTitle="View All Products" color="#DC2626" increaseData={increaseData} />
+                <Button buttonTitle="View All Products" color="#DC2626" buttonFunk={increaseData} />
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ const OurProducts = () => {
             <Title sectionTitle="Our Products" sectionInfo="Explore Our Products" />
             <Products percentage={1} pageCount={2 * dataCount} />
             <div className=' py-14 border-b-2 border-gray-300 flex justify-center'>
-                <Button buttonTitle="View All Products" color="#DC2626" increaseData={increaseData} />
+                <Button buttonTitle="View All Products" color="#DC2626" buttonFunk={increaseData} />
             </div>
         </div>
     )
