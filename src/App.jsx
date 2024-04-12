@@ -6,6 +6,7 @@ import Main from './layout/Main'
 import Footer from './layout/Footer'
 import SignUp from './common/Pages/SignUp'
 import SignIn from './common/Pages/SignIn'
+import HeartLike from './common/Pages/HeartLike'
 const App = () => {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<SignIn />} />
+        <Route path='/heartlike' element={<HeartLike />} />
         <Route path='/' element={<Main />} />
       </Routes>
       <Footer />

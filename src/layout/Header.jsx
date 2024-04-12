@@ -1,9 +1,11 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
 import { CiHeart } from "react-icons/ci";
 import { NavLink } from 'react-router-dom'
-import { BsPerson } from "react-icons/bs";
+import { BsPerson, BsBasket3, BsStar } from "react-icons/bs";
+import { MdOutlineCancel } from "react-icons/md";
+import { CiLogout } from "react-icons/ci";
 
 const Header = () => {
     const data = [
@@ -32,6 +34,11 @@ const Header = () => {
     const handleClick = () => {
         ref.current.focus();
     };
+    const [clicked, setClicked] = useState(false);
+
+    const toggleDiv = () => {
+        setClicked(!clicked);
+    };
     return (
         <header className='border-b border-gray-500'>
             <div className='flex items-center justify-between container w-[90%] m-auto mt-10 pb-4 '>
@@ -40,7 +47,7 @@ const Header = () => {
                     {data.map(item => (
                         item.name && (
                             <li key={item.id} className='md:text-sm lg:text-base'>
-                                <NavLink  to={item.url} className={ ({ isActive }) => isActive ? 'border-b border-gray-500' : ''} >{item.name}</NavLink>
+                                <NavLink to={item.url} className={({ isActive }) => isActive ? 'border-b border-gray-500' : ''} >{item.name}</NavLink>
                             </li>
                         )
                     ))}
@@ -51,9 +58,20 @@ const Header = () => {
                         <CiSearch className='md:text-xl lg:text-2xl' onClick={handleClick} />
                     </div>
                     <div className='flex items-center justify-evenly md:gap-4 lg:gap-7'>
-                        <CiHeart className='md:text-xl lg:text-[27px]' />
+                        <NavLink to={'/heartlike'} ><CiHeart className='md:text-xl lg:text-[27px]' /></NavLink>
                         <SlBasket className='md:text-xl lg:text-[24px]' />
-                        <BsPerson className='md:text-xl lg:text-[25px]' />
+                        <div
+                            className={`flex items-center justify-center rounded-full relative w-8 h-8 ${clicked ? 'bg-red-600' : ''}`}
+                            onClick={toggleDiv}>
+                            <BsPerson className={`md:text-xl lg:text-[25px] ${clicked ? 'text-white' : ''}`} />
+                            <ul className='absolute top-10 right-0 w-60  rounded-sm p-5 bg-zinc-700 bg-opacity-90 z-10 text-white text-2xl flex flex-col gap-4'>
+                                <li className='flex items-center gap-4'><BsPerson /> <p className='text-sm'>Manage My Account</p></li>
+                                <li className='flex items-center gap-4'><BsBasket3 /><p className='text-sm'>My Order</p></li>
+                                <li className='flex items-center gap-4'><MdOutlineCancel /><p className='text-sm'>My Cancellations</p></li>
+                                <li className='flex items-center gap-4'><BsStar /><p className='text-sm'>My Reviews</p></li>
+                                <li className='flex items-center gap-4'><CiLogout /><p className='text-sm'>Logout</p></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

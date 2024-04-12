@@ -17,13 +17,11 @@ const SignUp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // 1. İsim kontrolü
         if (name.length < 3) {
             setNameError('Name must be at least 3 characters');
             return;
         }
 
-        // E-posta kontrolü
         if (!isValidEmail(email)) {
             setEmailError('Please enter a valid email address');
             return;
@@ -45,7 +43,6 @@ const SignUp = () => {
         }
     };
 
-    // E-posta adresinin doğruluğunu kontrol eden işlev
     const isValidEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
