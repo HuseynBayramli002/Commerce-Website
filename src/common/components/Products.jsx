@@ -105,7 +105,7 @@ const Products = (props) => {
                                     ) : (
                                         <div className=" mb-2 flex gap-2 items-center select-none w-52">
                                             <p className="text-red-600">${product.price}</p>
-                                            <Rate allowHalf readOnly defaultValue={product.rating} onChange={handleChange} style={{ fontSize: "18px" }} />
+                                            <Rate allowHalf readOnly defaultValue={product.rating} onChange={handleChange} style={{ btnSize: "18px" }} />
                                             <p className="text-gray-500 text-sm">({product.stock})</p>
                                         </div>
                                     )}

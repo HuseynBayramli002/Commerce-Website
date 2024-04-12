@@ -41,7 +41,7 @@ const ReklamSection = () => {
             </div>
           ))}
         </div>
-        <div className="pt-10 pb-16 w-48"><Button color='#00bd3d' buttonTitle="Buy Now!" /></div>
+        <div className="pt-10 pb-16 w-48"><Button color='#00bd3d' btnTitle="Buy Now!" /></div>
       </div>
       <div className="relative z-[0]" >
         <div className="rounded-full  blur-3xl bg-[#7e7e7ea6] absolute w-full h-full z-[-1]"></div>

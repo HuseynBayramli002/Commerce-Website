@@ -12,7 +12,7 @@ const BestSelling = () => {
         <div className=' sm:mt-12 md:mt-24 lg:mt-32 pb-32'>
                 <div className="flex justify-between items-end">
                 <Title sectionTitle="This Month" sectionInfo="Best Selling Products"/>
-                <Button buttonTitle="View All" color="#DC2626" buttonFunk={increaseData}/>
+                <Button btnTitle="View All" color="#DC2626" btnFunk={increaseData}/>
                 </div>
             <Products percentage={0.9} pageCount={dataCount} />
         </div>
