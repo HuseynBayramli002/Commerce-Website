@@ -61,16 +61,21 @@ const Header = () => {
                         <NavLink to={'/heartlike'} ><CiHeart className='md:text-xl lg:text-[27px]' /></NavLink>
                         <SlBasket className='md:text-xl lg:text-[24px]' />
                         <div
-                            className={`flex items-center justify-center rounded-full relative w-8 h-8 ${clicked ? 'bg-red-600' : ''}`}
+                            className={`flex items-center justify-center transition-all duration-300 rounded-full relative w-8 h-8  ${clicked ? 'bg-red-500' : ''}`}
                             onClick={toggleDiv}>
                             <BsPerson className={`md:text-xl lg:text-[25px] ${clicked ? 'text-white' : ''}`} />
-                            <ul className='absolute top-10 right-0 w-60  rounded-sm p-5 bg-zinc-700 bg-opacity-90 z-10 text-white text-2xl flex flex-col gap-4'>
-                                <li className='flex items-center gap-4'><BsPerson /> <p className='text-sm'>Manage My Account</p></li>
-                                <li className='flex items-center gap-4'><BsBasket3 /><p className='text-sm'>My Order</p></li>
-                                <li className='flex items-center gap-4'><MdOutlineCancel /><p className='text-sm'>My Cancellations</p></li>
-                                <li className='flex items-center gap-4'><BsStar /><p className='text-sm'>My Reviews</p></li>
-                                <li className='flex items-center gap-4'><CiLogout /><p className='text-sm'>Logout</p></li>
-                            </ul>
+                            {clicked && 
+                                (
+                                    <ul className='absolute top-10 right-0 w-60  rounded-sm p-5 bg-zinc-700 bg-opacity-90 z-10 text-white text-2xl flex flex-col gap-4'>
+                                        <li className='flex items-center gap-4'><BsPerson /> <p className='text-sm'>Manage My Account</p></li>
+                                        <li className='flex items-center gap-4'><BsBasket3 /><p className='text-sm'>My Order</p></li>
+                                        <li className='flex items-center gap-4'><MdOutlineCancel /><p className='text-sm'>My Cancellations</p></li>
+                                        <li className='flex items-center gap-4'><BsStar /><p className='text-sm'>My Reviews</p></li>
+                                        <li className='flex items-center gap-4'><CiLogout /><p className='text-sm'>Logout</p></li>
+                                    </ul>
+                                )
+                        
+                            }
                         </div>
                     </div>
                 </div>

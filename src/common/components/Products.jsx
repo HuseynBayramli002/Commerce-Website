@@ -60,7 +60,7 @@ const Products = (props) => {
                             <div className="absolute bg-white h-8 w-8 top-3 right-2 rounded-full flex justify-center items-center md:h-5 md:w-5">
                                 {clickedHearts.includes(index) ? (
                                     <FaHeart
-                                        className="font-medium text-red-600 md:text-sm lg:text-xl"
+                                        className="font-medium text-red-500 md:text-sm lg:text-xl"
                                         onClick={() => handleClick(index)}
                                     />
                                 ) : (
@@ -78,7 +78,7 @@ const Products = (props) => {
                                 />
                             </div>
                             {percentage !== 1 && (
-                                <div className="absolute top-3 left-2 w-10 h-6 bg-red-600 rounded-sm flex items-center justify-center">
+                                <div className="absolute top-3 left-2 w-10 h-6 bg-red-500 rounded-sm flex items-center justify-center">
                                     <p className="text-white text-sm ">
                                         -${100 - 100 * percentage}
                                     </p>
@@ -90,7 +90,7 @@ const Products = (props) => {
                                     {percentage !== 1 ? (
                                         <>
                                             <div className="flex gap-3">
-                                                <p className="text-red-600 md:text-sm lg:text-base">
+                                                <p className="text-red-500 md:text-sm lg:text-base">
                                                     ${(product.price * percentage).toFixed(2)}
                                                 </p>
                                                 <p className="text-gray-500 line-through md:text-sm lg:text-base">
@@ -104,7 +104,7 @@ const Products = (props) => {
                                         </>
                                     ) : (
                                         <div className=" mb-2 flex gap-2 items-center select-none w-52">
-                                            <p className="text-red-600">${product.price}</p>
+                                            <p className="text-red-500">${product.price}</p>
                                             <Rate allowHalf readOnly defaultValue={product.rating} onChange={handleChange} style={{ btnSize: "18px" }} />
                                             <p className="text-gray-500 text-sm">({product.stock})</p>
                                         </div>

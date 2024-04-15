@@ -40,7 +40,7 @@ const SignIn = () => {
                 {error && <p className='text-red-700'>{error}</p>}
                 <div className='mt-10 flex justify-between items-center'>
                     <Button btnFunk={handleSubmit} btntype="submit" btnTitle="Log in" color='#DC2626' btnSize='16px' btnWeight='500' />
-                    <p className='text-red-600'>Forget Password?</p>
+                    <p className='text-red-500'>Forget Password?</p>
                 </div>
             </form>
         </div>

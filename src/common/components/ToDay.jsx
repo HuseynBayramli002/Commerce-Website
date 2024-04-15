@@ -38,7 +38,7 @@ const ToDay = () => {
         <div className=' sm:mt-12 md:mt-24 lg:mt-32'>
             <div className='flex  items-end gap-24'>
                 <Title sectionTitle="Today’s" sectionInfo="Flash Sales"/>
-                <div className='flex gap-2 items-end font-bold text-red-600 text-3xl'>
+                <div className='flex gap-2 items-end font-bold text-red-500 text-3xl'>
                     {data.map((item) => (
                         <span className='flex flex-col text-black justify-center' key={item.id}>
                             <span className='font-medium text-sm' >{item.time}</span>

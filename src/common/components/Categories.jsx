@@ -34,7 +34,7 @@ const Categories = () => {
                 {categoryData.map((category, index) => (
                     <div 
                         key={index} 
-                        className={`border w-36 h-36 flex flex-col items-center justify-center border-gray-400 ${index === clickedIndex ? 'text-white bg-red-600 border-red-600' : ''}`} 
+                        className={`border w-36 h-36 flex flex-col items-center justify-center border-gray-400 ${index === clickedIndex ? 'text-white bg-red-500 border-red-500' : ''}`} 
                         onClick={() => handleClick(index)}
                     >
                         <category.icon className='text-5xl font-thin' />
