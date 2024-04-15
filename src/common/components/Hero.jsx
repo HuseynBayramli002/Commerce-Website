@@ -64,7 +64,7 @@ export default function Hero() {
                     ))}
                 </ul>
             </div>
-            <div className='w-5/6'>
+            <div className='w-5/6 pl-10'>
                 <SliderSwiper />
             </div>
         </div>
