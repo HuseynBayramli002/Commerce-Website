@@ -4,7 +4,7 @@ const Button = (props) => {
   const { btnTitle, buttonIcon, color, textColor, btnSize, btnWeight, btnFunk, btntype } = props;
 
   return (
-    <div className=''>
+    <div className='select-none'>
       <button
       type={btntype}
        className='w-full rounded-sm px-12 py-4 text-base text-white font-medium flex items-center' style={{ backgroundColor: color, color: textColor, fontSize: btnSize, fontWeight: btnWeight, transition: "opacity 0.35s" }}

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { RiFacebookLine, RiTwitterLine, RiInstagramLine, RiLinkedinLine } from "react-icons/ri";
 const Footer = () => {
     return (
-        <div className=' bg-black text-white '>
+        <div className=' bg-black text-white select-none'>
             <div className='flex justify-evenly px-20 pt-10 mt-36 pb-5 border-b-[1px] border-gray-700'>
                 <div className='flex flex-col gap-1'>
                     <h2 className='font-bold  text-2xl pb-2'>Exclusive</h2>

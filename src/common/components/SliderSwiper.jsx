@@ -1,91 +1,56 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { FaApple } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import Iphoneimg from '../../assets/Iphone.png'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../../index.css";
-import { NavLink } from 'react-router-dom'
-import { IoIosArrowForward } from "react-icons/io";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { SliderSlayd } from "./SliderSlayd";
-export default function SliderSwiper() {
-    const data = [
-        {
-            id: 1,
-            name: 'Woman’s Fashion',
-            url: '/'
-        },
-        {
-            id: 2,
-            name: 'Man’s Fashion',
-            url: '/'
-        },
-        {
-            id: 3,
-            name: 'Electronics',
-            url: '/'
-        },
-        {
-            id: 4,
-            name: 'Home & Lifestyle',
-            url: '/'
-        },
-        {
-            id: 5,
-            name: 'Medicine',
-            url: '/'
-        },
-        {
-            id: 6,
-            name: 'Sports & Outdoor',
-            url: '/'
-        },
-        {
-            id: 7,
-            name: 'Baby’s & Toys',
-            url: '/'
-        },
-        {
-            id: 8,
-            name: 'Grocery & Pets',
-            url: '/'
-        },
-        {
-            id: 9,
-            name: 'Health & Beauty',
-            url: '/'
-        }
-    ]
-    return (
-        <div className="flex">
-            <div className='md:pt-5 lg:pt-10 border-r border-gray-500'>
-                <ul className='w-44 flex flex-col md:gap-[6px] lg:gap-4'>
-                    {data.map((item, index) => (
-                        <li key={item.id} className='flex items-center justify-between md:text-sm lg:text-base pr-2'>
-                            <NavLink to={item.url} className="flex items-center">
-                                {item.name}
-                            </NavLink>
-                            {index === 0 || index === 1 ? <IoIosArrowForward className="ml-1" /> : null}
-                        </li>
-                    ))}
-                </ul>
-            </div>
 
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{ delay: 5000, disableOnInteraction: false, }}
-                pagination={{ clickable: true, }}
-                navigation={false}
-                loop={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper md:mt-5 lg:mt-10 ml-10 select-none "
-            >
-                <SwiperSlide className="bg-slate-500"><SliderSlayd />  </SwiperSlide>
-                <SwiperSlide className="bg-slate-500"><SliderSlayd />  </SwiperSlide>
-                <SwiperSlide className="bg-slate-500"><SliderSlayd />  </SwiperSlide>
-                <SwiperSlide className="bg-slate-500"><SliderSlayd />  </SwiperSlide>
-                <SwiperSlide className="bg-slate-500"><SliderSlayd />  </SwiperSlide>
-            </Swiper>
+export const HeroSlider = () => {
+    return (
+        <div className='container w- bg-black flex justify-between md:pl-8 lg:pl-16'>
+            <div className=' '>
+                <div className='flex justify-start items-end mt-14 md:gap-4 lg:gap-7 '>
+                    <FaApple className='text-white sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl' />
+                    <p className='text-white whitespace-nowrap md:text-sm lg:text-base'>iPhone 14 Series </p>
+                </div>
+                <p className='text-white whitespace-nowrap tracking-wider leading-15 font-bold text-start my-5 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>Up to 10%  <br /> off Voucher</p>
+                <div className=' flex items-center pb-10'>
+                    <div className=''>
+                        <NavLink to={'/'} className='text-white  font-bold border-b ml-0 mr-auto border-white '>Shop Now</NavLink>
+                    </div>
+                    <IoIosArrowRoundForward className='text-white text-2xl' />
+                </div>
+            </div>
+            <div className='flex justify-center items-center md:m-5 lg:m-10'><img src={Iphoneimg} /></div>
+
         </div>
-    );
+    )
 }
+
+const SliderSwiper = () => {
+    return (
+        <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false, }}
+            pagination={{ clickable: true, }}
+            navigation={false}
+            loop={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper md:mt-5 lg:mt-10 ml-10 select-none "
+        >
+            <SwiperSlide className="bg-slate-500"> <HeroSlider /> </SwiperSlide>
+            <SwiperSlide className="bg-slate-500"> <HeroSlider /> </SwiperSlide>
+            <SwiperSlide className="bg-slate-500"> <HeroSlider /> </SwiperSlide>
+            <SwiperSlide className="bg-slate-500"> <HeroSlider /> </SwiperSlide>
+            <SwiperSlide className="bg-slate-500"> <HeroSlider /> </SwiperSlide>
+            <SwiperSlide className="bg-slate-500"> <HeroSlider /> </SwiperSlide>
+        </Swiper>
+    )
+}
+
+export default SliderSwiper

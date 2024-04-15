@@ -40,7 +40,7 @@ const Header = () => {
         setClicked(!clicked);
     };
     return (
-        <header className='border-b border-gray-500'>
+        <header className='border-b border-gray-500 select-none'>
             <div className='flex items-center justify-between container w-[90%] m-auto mt-10 pb-4 '>
                 <h1 className='font-bold  md:text-xl lg:text-2xl'>Exclusive</h1>
                 <ul className='flex md:gap-3 lg:gap-[3rem]'>

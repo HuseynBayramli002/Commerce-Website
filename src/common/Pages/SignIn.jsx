@@ -29,7 +29,7 @@ const SignIn = () => {
 
     return (
         <div className='flex mt-14 w-full justify-between gap-20 pr-24'>
-            <div>
+            <div className='w-3/5'>
                 <img className='select-none' src={Basketphone} alt="" />
             </div>
             <form className='flex flex-col justify-center'>

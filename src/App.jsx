@@ -10,18 +10,18 @@ import HeartLike from './common/Pages/HeartLike'
 import About from './common/Pages/About'
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Header />
-      <Routes>
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<SignIn />} />
-        <Route path='/heartlike' element={<HeartLike />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/' element={<Main />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Header />
+        <Routes>
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/login' element={<SignIn />} />
+          <Route path='/heartlike' element={<HeartLike />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/' element={<Main />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
 
   )
 }

@@ -78,7 +78,7 @@ const Products = (props) => {
                                 />
                             </div>
                             {percentage !== 1 && (
-                                <div className="absolute top-3 left-2 w-10 h-6 bg-red-500 rounded-sm flex items-center justify-center">
+                                <div className="absolute top-3 left-2 w-10 h-6 bg-red-500 rounded-sm flex items-center justify-center select-none">
                                     <p className="text-white text-sm ">
                                         -${100 - 100 * percentage}
                                     </p>
@@ -89,7 +89,7 @@ const Products = (props) => {
                                 <div>
                                     {percentage !== 1 ? (
                                         <>
-                                            <div className="flex gap-3">
+                                            <div className="flex gap-3 select-none">
                                                 <p className="text-red-500 md:text-sm lg:text-base">
                                                     ${(product.price * percentage).toFixed(2)}
                                                 </p>

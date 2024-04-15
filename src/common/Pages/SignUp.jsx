@@ -50,7 +50,7 @@ const SignUp = () => {
 
     return (
         <div className='flex mt-14 w-full justify-between gap-20 pr-24'>
-            <div>
+            <div className='w-3/5'>
                 <img src={Basketphone} className='select-none' alt="" />
             </div>
             <form className='flex flex-col justify-center' onSubmit={handleSubmit}>

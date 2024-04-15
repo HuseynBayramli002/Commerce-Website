@@ -3,7 +3,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 
 const Navbar = () => {
   return (
-    <div className='bg-black relative w-full'>
+    <div className='bg-black relative w-full select-none'>
       <div className='container flex justify-center items-center h-12  '>
         <p className='text-white md:text-xs lg:text-sm'>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!<span className='ml-2 font-bold border-b border-white'>ShopNow</span></p>
         <div className='absolute right-24'>
