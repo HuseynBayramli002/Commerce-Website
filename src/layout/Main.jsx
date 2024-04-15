@@ -1,5 +1,5 @@
 import React from 'react'
-import SliderSwiper from '../common/components/SliderSwiper';
+import Hero from '@/common/components/Hero';
 import ToDay from '../common/components/ToDay';
 import Categories from '@/common/components/Categories';
 import BestSelling from '@/common/components/BestSelling';
@@ -13,7 +13,7 @@ import ServiceInfo from '@/common/components/ServiceInfo';
 const Main = () => {
     return (
         <div className='container w-[90%] m-auto'>
-            <SliderSwiper />
+            <Hero />
             <ToDay />
             <Categories />
             <BestSelling />
