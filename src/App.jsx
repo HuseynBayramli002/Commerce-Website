@@ -8,6 +8,7 @@ import SignUp from './common/Pages/SignUp'
 import SignIn from './common/Pages/SignIn'
 import HeartLike from './common/Pages/HeartLike'
 import About from './common/Pages/About'
+import Contact from './common/Pages/Contact'
 const App = () => {
   return (
       <BrowserRouter>
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/login' element={<SignIn />} />
           <Route path='/heartlike' element={<HeartLike />} />
           <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact/>} />
           <Route path='/' element={<Main />} />
         </Routes>
         <Footer />
