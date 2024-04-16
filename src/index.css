@@ -123,8 +123,8 @@
 .swiper-pagination-bullet {
   width: 12px; 
   height: 12px; 
-  background-color:  #ffffff; 
-  border:2px solid #ffffff;
+  background-color:  #a5a4a4; 
+  border:2px solid #a5a5a5;
   margin: 0 5px;
 }
 .swiper-pagination-bullet-active {
