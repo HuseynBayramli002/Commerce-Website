@@ -8,9 +8,6 @@ import "react-rater/lib/react-rater.css";
 
 const Products = (props) => {
     const { percentage, pageCount } = props;
-
-
-    const [page, setPage] = useState(pageCount);
     const [products, setProducts] = useState([]);
     const [clickedHearts, setClickedHearts] = useState([]);
     const [hoveredIndex, setHoveredIndex] = useState(null);
