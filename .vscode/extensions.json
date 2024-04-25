@@ -1,5 +1,9 @@
 {
     "recommendations": [
-        "formulahendry.auto-complete-tag"
+        "formulahendry.auto-complete-tag",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.code-runner",
+        "pucelle.vscode-css-navigation",
+        "vscode-icons-team.vscode-icons"
     ]
 }

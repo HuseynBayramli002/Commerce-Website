@@ -34,18 +34,18 @@ const SignIn = () => {
             <form className='flex flex-col justify-center'>
                 <p className='text-4xl font-medium'>Log in to Exclusive</p>
                 <p className='mt-6'>Enter your details below</p>
-                <input 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-                type="text" 
-                placeholder='Email or Phone Number'
-                className='border-b-[1px] outline-none mt-8 py-2' />
-                <input 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
-                type="password" 
-                placeholder='Password' 
-                className='border-b-[1px] outline-none mt-8 py-2' />
+                <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    placeholder='Email or Phone Number'
+                    className='border-b-[1px] outline-none mt-8 py-2' />
+                <input
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    type="password"
+                    placeholder='Password'
+                    className='border-b-[1px] outline-none mt-8 py-2' />
                 {error && <p className='text-red-700'>{error}</p>}
                 <div className='mt-10 flex justify-between items-center'>
                     <Button btnFunk={handleSubmit} btntype="submit" btnTitle="Log in" color='#DC2626' btnSize='16px' btnWeight='500' />

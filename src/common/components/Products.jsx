@@ -5,6 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { Rate } from 'antd';
 import "react-rater/lib/react-rater.css";
+import { NavLink } from "react-router-dom";
 
 const Products = (props) => {
     const { percentage, pageCount } = props;
@@ -15,39 +16,48 @@ const Products = (props) => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get("https://dummyjson.com/products");
-                setProducts(response.data.products.splice(0, pageCount * 4));
+                const response = await axios.get("http://localhost:3000/products");
+                setProducts(response.data.slice(0, pageCount * 4));
             } catch (error) {
                 console.error("Error fetching products:", error);
+                console.log(products)
             }
         };
         fetchProducts();
     }, [pageCount]);
 
-    const handleClick = (index) => {
-        if (clickedHearts.includes(index)) {
-            setClickedHearts((prev) => prev.filter((item) => item !== index));
+    const handleClick = (productId) => {
+        if (clickedHearts.includes(productId)) {
+            setClickedHearts(prev => prev.filter(item => item !== productId));
         } else {
-            setClickedHearts((prev) => [...prev, index]);
+            setClickedHearts(prev => [...prev, productId]);
         }
+    };
+    const handleNavLinkClick = (productId) => {
+        localStorage.setItem('user', JSON.stringify({
+            id: productId
+        }));
     };
 
     const handleChange = value => {
-        console.log(value); // Değer değiştiğinde yapılacak işlemler
+        console.log(value);
     };
+
 
     return (
         <div className="mt-7">
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4"> 
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
                 {products.length > 0 ? (
                     products.map((product, index) => (
-                        <div
+                        <NavLink
+                            to={"/productinfo"}
                             key={index}
+                            onClick={() => handleNavLinkClick(product.id)}
                             className="border border-gray-200 rounded-lg overflow-hidden relative md:w-44 lg:w-60"
                         >
                             <img
                                 className="w-full object-cover select-none md:h-36 lg:h-48"
-                                src={product.thumbnail}
+                                src={product.images[0]}
                                 alt=""
                                 style={{
                                     transition: "transform 0.3s ease-in-out",
@@ -109,15 +119,15 @@ const Products = (props) => {
                                 </div>
                             </div>
 
-                        </div>
+                        </NavLink>
                     ))
                 ) : (
-                    <h2 className="text-center">
+                    <h2>
                         <i>Loading Products...</i>
                     </h2>
                 )}
             </div>
-        </div>
+        </div >
     );
 };
 
