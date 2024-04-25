@@ -8,6 +8,7 @@ const ProductInfo = () => {
     console.log(userID);
 
     const [product, setProduct] = useState(null);
+    const [selectedColor, setSelectedColor] = useState('red');
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -54,14 +55,18 @@ const ProductInfo = () => {
                         <p className="text-2xl">
                             ${product.price}
                         </p>
-
                         <p className='mt-6 text-sm'>{product.description}</p>
+                        <div className='w-full h-[1px] bg-gray-300 my-6'></div>
+                        <div className='flex gap-6 '>
+                            <p className='text-xl'>Colors:</p>
+
+                        </div>
                     </div>
                 </div>
             ) : (
                 <p className='container w-[90%] m-auto'>Loading...</p>
             )}
-        </div>
+        </div >
     );
 };
 
