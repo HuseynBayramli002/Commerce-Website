@@ -49,21 +49,25 @@ const Products = (props) => {
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
                 {products.length > 0 ? (
                     products.map((product, index) => (
-                        <NavLink
-                            to={"/productinfo"}
-                            key={index}
-                            onClick={() => handleNavLinkClick(product.id)}
+                        <div
+
                             className="border border-gray-200 rounded-lg overflow-hidden relative md:w-44 lg:w-60"
                         >
-                            <img
-                                className="w-full object-cover select-none md:h-36 lg:h-48"
-                                src={product.images[0]}
-                                alt=""
-                                style={{
-                                    transition: "transform 0.3s ease-in-out",
-                                    transform: hoveredIndex === index ? "scale(1.2)" : "scale(1)",
-                                }}
-                            />
+                            <NavLink
+                            to={"/productinfo"}
+                            key={index}
+                            onClick={() => handleNavLinkClick(product.id)}>
+
+                                <img
+                                    className="w-full object-cover select-none md:h-36 lg:h-48"
+                                    src={product.images[0]}
+                                    alt=""
+                                    style={{
+                                        transition: "transform 0.3s ease-in-out",
+                                        transform: hoveredIndex === index ? "scale(1.2)" : "scale(1)",
+                                    }}
+                                />
+                            </NavLink>
                             <div className="absolute bg-white h-8 w-8 top-3 right-2 rounded-full flex justify-center items-center md:h-5 md:w-5">
                                 {clickedHearts.includes(index) ? (
                                     <FaHeart
@@ -119,7 +123,7 @@ const Products = (props) => {
                                 </div>
                             </div>
 
-                        </NavLink>
+                        </div>
                     ))
                 ) : (
                     <h2>
